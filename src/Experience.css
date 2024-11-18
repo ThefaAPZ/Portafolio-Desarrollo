@@ -1,0 +1,275 @@
+/* Estilos Base para Móviles */
+.experience {
+    padding: 40px 10px;
+    padding-bottom: 0;
+    background: #172846;
+    color: #ffffff;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.experience::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('./assets/fondo2.png') no-repeat center center/cover;
+    opacity: 0.3;
+    z-index: 1;
+}
+
+.content-wrapper {
+    position: relative;
+    z-index: 2;
+    max-width: 100%;
+    margin: 0 auto;
+    margin-bottom: 0;
+}
+
+.experience-title {
+    font-size: 2rem;
+    color: #32e5b7;
+    font-weight: bold;
+}
+
+.experience-subtitle {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #b8c6e3;
+}
+
+.group-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.group-tab {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.group-tab:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.group-tab.active {
+    background: rgba(8, 238, 242, 0.25);
+    border-color: rgba(8, 238, 242, 0.6);
+    box-shadow: 0 0 10px rgba(8, 238, 242, 0.5);
+}
+
+.carousel-wrapper {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.carousel-container {
+    width: 100%;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.carousel {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.carousel-item {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    transition: all 0.5s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.carousel-item.active {
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 5;
+}
+
+.item-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-wrapper {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(141, 46, 46, 0.1);
+    border-radius: 8px;
+    padding: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.carousel-item.active .image-wrapper {
+    transform: scale(1.1);
+    background: rgba(24, 22, 22, 0.2);
+    box-shadow: 0 0 20px rgba(232, 232, 238, 0.2);
+}
+
+.carousel-item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.tech-name {
+    margin-top: 1rem;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.arrow {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: #ffffff;
+    font-size: 2rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.arrow:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.left-arrow {
+    left: 10px;
+}
+
+.right-arrow {
+    right: 10px;
+}
+
+/* Media Query para Tablets */
+@media (min-width: 768px) {
+    .experience {
+        padding: 60px 20px;
+    }
+
+    .carousel-wrapper {
+        padding: 0 40px;
+    }
+
+    .carousel-item {
+        width: 120px;
+        height: 120px;
+    }
+
+    .image-wrapper {
+        width: 100px;
+        height: 100px;
+    }
+
+    .arrow {
+        width: 50px;
+        height: 50px;
+        font-size: 2.5rem;
+    }
+
+    .group-tab {
+        padding: 12px 24px;
+        font-size: 1rem;
+    }
+
+    .experience-title {
+        font-size: 2.2rem;
+        color: #32e5b7;
+        font-weight: bold;
+    }
+
+    .experience-subtitle {
+        font-size: 1.1rem;
+    }
+}
+
+/* Media Query para Laptops */
+@media (min-width: 1024px) {
+    .experience {
+        padding: 80px 20px;
+        padding-bottom: 0;
+
+    }
+
+    .content-wrapper {
+        max-width: 1200px;
+    }
+
+    .carousel-wrapper {
+        padding: 0 60px;
+    }
+
+    .carousel-item {
+        width: 150px;
+        height: 150px;
+    }
+
+    .image-wrapper {
+        width: 120px;
+        height: 120px;
+    }
+
+    .tech-name {
+        font-size: 1.2rem;
+    }
+
+    .group-tab {
+        font-size: 1.1rem;
+    }
+
+    .experience-title {
+        font-size: 2.5rem;
+        color: #32e5b7;
+        font-weight: bold;
+    }
+
+
+
+    .experience-subtitle {
+        font-size: 1.2rem;
+    }
+}

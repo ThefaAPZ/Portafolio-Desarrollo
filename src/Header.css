@@ -1,0 +1,141 @@
+/* Header.css */
+.header-container {
+    background: #172846;
+    color: #ffffff;
+    padding: 150px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Añadir el efecto difuminado desde el bottom */
+.header-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+  linear-gradient(to top, rgb(24, 41, 67), rgba(23, 40, 70, 0) 40%),
+  url('./assets/fondo.png'); /* Imagen de fondo */
+  background-size: cover;
+  background-position: center;
+  opacity: 0.3;
+  z-index: 1;
+}
+
+/* Modificamos el fondo animado para que esté por encima de la imagen */
+.header-container::before {
+    content: '';
+    position: absolute;
+    top: -20%;
+    left: -20%;
+    width: 150%;
+    height: 150%;
+    background: radial-gradient(circle at center, rgba(0, 128, 128, 0.2), transparent 70%);
+    animation: rotate 20s linear infinite;
+    z-index: 2;
+}
+  
+  .header-content {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  .text-section {
+    max-width: 600px;
+  }
+  
+  .greeting {
+    font-size: 1.5rem;
+    color: #8f98ff;
+  }
+  
+  h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+  }
+  
+  .highlight {
+    color: #32e5b7;
+  }
+
+  .highblue {
+    color: #7aa2f7;
+  }
+
+  .highpurple{
+    color: #c15af1;
+  }
+  
+  .role {
+    color: #fff;
+  }
+  
+  .description {
+    font-size: 1.2rem;
+    color: #b5b5b5;
+    margin-top: 20px;
+  }
+  
+  .social-links {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+  }
+  
+  .social-links a img {
+    width: 42px;
+    height: 42px;
+    filter: invert(1);
+    transition: transform 0.3s ease;
+    border-radius: 0;
+  }
+  
+  .social-links a:hover img {
+    transform: scale(1.1);
+  }
+  
+  .avatar-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .avatar-img {
+    width: 300px;
+    border-radius: 10%;
+    border: 5px solid #32e5b7;
+  }
+  
+  /* Fondo animado */
+  .header-container::before {
+    content: '';
+    position: absolute;
+    top: -20%;
+    left: -20%;
+    width: 150%;
+    height: 150%;
+    background: radial-gradient(circle at center, rgba(0, 128, 128, 0.2), transparent 70%);
+    animation: rotate 20s linear infinite;
+  }
+  
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }  

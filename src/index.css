@@ -1,0 +1,29 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #F1ECEC;
+  color: #333;
+  margin: 0px;
+  
+}
+
+section {
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #333;
+  text-align: center;
+}
+
+a {
+  color: #0073e6;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+}

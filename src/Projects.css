@@ -1,0 +1,192 @@
+/* Estilo general */
+.projects-section {
+    padding: 60px 100px;
+    background: #172846;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.projects-section .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('./assets/fondo2.png') no-repeat center center/cover;
+    opacity: 0.3;
+    z-index: 1;
+}
+
+.projects-section h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Contenedor principal con filas */
+.projects-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Estilo de los cuadros de texto */
+.project-card-text {
+    flex: 1;
+    background: rgba(8, 238, 242, 0.25);
+    padding: 30px;
+    border-radius: 10px;
+    border: 2px solid rgba(8, 238, 242, 0.6);
+    box-shadow: 0 0 20px rgba(8, 238, 242, 0.5);
+    text-align: left;
+    margin-top: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.project-card-text h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+    margin-top: 20px;
+    z-index: 1;
+}
+
+.project-card-text p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #ffffff;
+    margin-top: 20px;
+    z-index: 1;
+}
+
+/* Estilo para las imágenes del proyecto AgerLinks */
+.project-card-images {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.project-image {
+    flex: 1;
+    margin-right: 10px;
+    margin-top: 15px;
+}
+
+.project-image img {
+    width: 70%;
+    object-fit: cover;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+/* Estilo para la imagen del proyecto Data Parking */
+.project-card-image {
+    flex: 1;
+    z-index: 1;
+}
+
+.project-card-image img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    z-index: 1;
+}
+
+.title{
+    color: #32e5b7;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+
+@media (max-width: 1024px) {
+    .projects-section {
+        padding: 60px 30px;
+    }
+
+    .projects-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .project-card-text {
+        flex: none;
+        width: 100%;
+    }
+
+    .project-card-images {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .project-image img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-section {
+        padding: 50px 20px;
+    }
+
+    .projects-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .project-card-text {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .project-card-text h3 {
+        font-size: 1.3rem;
+    }
+
+    .project-card-text p {
+        font-size: 0.9rem;
+    }
+
+    .project-card-images {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .project-image img {
+        width: 100%;
+        max-height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .projects-section {
+        padding: 40px 15px;
+    }
+
+    .projects-section h2 {
+        font-size: 2rem;
+    }
+
+    .project-card-text {
+        padding: 15px;
+    }
+
+    .project-card-text h3 {
+        font-size: 1.2rem;
+    }
+
+    .project-card-text p {
+        font-size: 0.85rem;
+    }
+
+    .project-image img {
+        width: 100%;
+        height: auto;
+    }
+}
